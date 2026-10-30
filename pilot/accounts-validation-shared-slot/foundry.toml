@@ -1,0 +1,12 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+cache_path = "cache"
+solc = "0.8.28"
+evm_version = "cancun"
+via_ir = false
+optimizer = true
+optimizer_runs = 200
+remappings = ["@openzeppelin/contracts/=../deps/oz5/", "@openzeppelin/contracts-upgradeable/=../deps/oz5u/", "lib/=../_lib/", "account-abstraction/=../deps/dl-aa07/aa/contracts/"]
+allow_paths = ["../deps", "../_lib"]

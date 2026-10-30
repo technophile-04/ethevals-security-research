@@ -1,0 +1,574 @@
+{
+ "accounts-4337-unused-gas-penalty": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "accounts-1271-permit2-cross-account-replay": {
+  "opus": {
+   "miss": 0,
+   "ok": 1,
+   "filtered": 2,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "accounts-7739-typeddatasign-domain": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "accounts-safe-guard-module-path": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "signatures-oz-ecdsa-signature-as-key": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "signatures-safe-legacy-domain-cross-chain": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "signatures-weth-phantom-permit": {
+  "opus": {
+   "miss": 0,
+   "ok": 0,
+   "filtered": 3,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "signatures-permit2-signaturetransfer-frontrun": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "upgrades-v5-proxyadmin-constructor": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "upgrades-v56-empty-initialization": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 0,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 1
+  }
+ },
+ "evm-compiler-assembly-write-removal": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "evm-vyper-cross-function-lock": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "compiler-legacy-init-order": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "compiler-eval-order-self-transfer": {
+  "opus": {
+   "miss": 0,
+   "ok": 2,
+   "filtered": 1,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "compiler-tuple-assignment-self-transfer": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "compiler-transient-clear-collision": {
+  "opus": {
+   "miss": 0,
+   "ok": 2,
+   "filtered": 1,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "upgrades-stateless-parent-gap": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 1
+  }
+ },
+ "forwarder-multicall-suffix-oz5": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 0,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 3
+  }
+ },
+ "evm-try-catch-empty-return": {
+  "opus": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "evm-transfer-refund-to-safe": {
+  "opus": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  }
+ },
+ "compiler-memory-bytes-delete": {
+  "opus": {
+   "miss": 2,
+   "ok": 0,
+   "filtered": 1,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 0,
+   "ok": 3,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 0,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 3
+  }
+ },
+ "evm-compiler-conditional-stop": {
+  "opus": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "gpt": {
+   "miss": 3,
+   "ok": 0,
+   "filtered": 0,
+   "cut": 0
+  },
+  "kimi": {
+   "miss": 2,
+   "ok": 1,
+   "filtered": 0,
+   "cut": 0
+  },
+  "glm": {
+   "miss": 1,
+   "ok": 2,
+   "filtered": 0,
+   "cut": 0
+  }
+ }
+}

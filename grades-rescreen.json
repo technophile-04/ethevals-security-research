@@ -1,0 +1,134 @@
+{
+ "accounts-4337-unused-gas-penalty": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "MISS(yes)",
+  "kimi": "ok"
+ },
+ "accounts-1271-permit2-cross-account-replay": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok",
+  "glm": "MISS(no)",
+  "kimi": "ok"
+ },
+ "accounts-7739-typeddatasign-domain": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(account)",
+  "glm": "MISS(account)"
+ },
+ "accounts-safe-guard-module-path": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "signatures-oz-ecdsa-signature-as-key": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(yes)",
+  "glm": "ok"
+ },
+ "signatures-safe-legacy-domain-cross-chain": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "MISS(no)",
+  "kimi": "ok"
+ },
+ "signatures-weth-phantom-permit": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok",
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "signatures-permit2-signaturetransfer-frontrun": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "ok",
+  "kimi": "MISS(yes)"
+ },
+ "upgrades-v5-proxyadmin-constructor": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "ok",
+  "glm": "MISS(yes)"
+ },
+ "upgrades-v56-empty-initialization": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "ok",
+  "glm": "ERR:EmptyReply: finish_reason=length"
+ },
+ "evm-compiler-assembly-write-removal": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "evm-vyper-cross-function-lock": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(yes)",
+  "glm": "MISS(yes)"
+ },
+ "compiler-legacy-init-order": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "MISS(alice)",
+  "kimi": "MISS(alice)"
+ },
+ "compiler-eval-order-self-transfer": {
+  "opus": "ok",
+  "kimi": "MISS(140)",
+  "gpt": "ok",
+  "glm": "ok"
+ },
+ "compiler-tuple-assignment-self-transfer": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(140)",
+  "glm": "MISS(140)"
+ },
+ "compiler-transient-clear-collision": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "MISS(no)",
+  "glm": "MISS(no)",
+  "kimi": "MISS(no)"
+ },
+ "upgrades-stateless-parent-gap": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "MISS(100)",
+  "kimi": "MISS(100)"
+ },
+ "forwarder-multicall-suffix-oz5": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(yes)",
+  "glm": "ERR:EmptyReply: finish_reason=length"
+ },
+ "evm-try-catch-empty-return": {
+  "opus": "ok",
+  "kimi": "MISS(yes)",
+  "gpt": "ok",
+  "glm": "MISS(yes)"
+ },
+ "evm-transfer-refund-to-safe": {
+  "opus": "MISS(no)",
+  "gpt": "ok",
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "compiler-memory-bytes-delete": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok",
+  "kimi": "MISS(alice)",
+  "glm": "ERR:EmptyReply: finish_reason=length"
+ },
+ "evm-compiler-conditional-stop": {
+  "opus": "MISS(no)",
+  "gpt": "MISS(no)",
+  "kimi": "MISS(no)",
+  "glm": "ok"
+ }
+}

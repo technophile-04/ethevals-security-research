@@ -1,0 +1,33 @@
+question                             opus         gpt          kimi         glm            (missed some / missed a High / graded)
+lending-pool-cap-and-reserve         0/0/2 n1     0/0/3        0/0/2 n3     0/0/2 n2    
+vaults-fee-claim-and-mark            0/0/3        0/0/3        1/1/2 n2     0/0/1 n4    
+vaults-harvest-redeem-units          0/0/3        0/0/3        0/0/2 n3     3/3/3       
+lending-guard-refund-cap             0/0/3        0/0/3        0/0/3        0/0/2 n3    
+fees-keys-subject-and-protocol       0/0/2 n1     0/0/3        0/0/3        1/0/3       
+lending-sanctions-escrow             0/0/2 n1     0/0/3        3/3/3        3/3/3       
+staking-withdraw-queue               0/0/2 n2     0/0/3        0/0/3 n3     3/3/3       
+governance-council                   0/0/3        0/0/3        0/0/3 n1     2/0/3       
+auctions-gallery-bids                0/0/3        0/0/3        0/0/3 n3     3/3/3 n1    
+accounts-relayed-wallet              0/0/3        0/0/3        3/0/3 n1     3/0/3       
+bridges-message-inbox                0/0/2 n2     0/0/3        2/0/3 n1     3/3/3       
+vesting-sponsored-grants             0/0/2 n2     0/0/3        0/0/3        1/1/3       
+
+false-claim rate per model (replies with an extra claimed vulnerability / graded):
+  opus: 21/30
+  gpt: 10/36
+  kimi: 10/33
+  glm: 27/32
+
+missed issues (issue(severity): times, all models) and false claims:
+  lending-pool-cap-and-reserve         missed={} false_claims=9
+  vaults-fee-claim-and-mark            missed={1(H):1} false_claims=7
+  vaults-harvest-redeem-units          missed={1(H):3, 2(H):1, 3(M):1} false_claims=8
+  lending-guard-refund-cap             missed={} false_claims=3
+  fees-keys-subject-and-protocol       missed={3(M):1} false_claims=7
+  lending-sanctions-escrow             missed={1(H):1, 2(H):6} false_claims=4
+  staking-withdraw-queue               missed={1(H):3, 2(H):1} false_claims=10
+  governance-council                   missed={3(M):2} false_claims=5
+  auctions-gallery-bids                missed={1(H):3} false_claims=3
+  accounts-relayed-wallet              missed={3(M):6} false_claims=4
+  bridges-message-inbox                missed={1(H):3, 3(M):4} false_claims=5
+  vesting-sponsored-grants             missed={3(H):1} false_claims=3

@@ -1,0 +1,10 @@
+Compiling 1 files with Solc 0.8.24
+Solc 0.8.24 finished in 55.85ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testDecimalBoundaryShiftDoesNotPreserveDigest() (gas: 102598)
+[PASS] testFuzzFixedWidths(uint256,uint256,uint256,uint256,uint256,uint256) (runs: 256, μ: 796, ~: 796)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 3.56ms (3.50ms CPU time)
+
+Ran 1 test suite in 3.81ms (3.56ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

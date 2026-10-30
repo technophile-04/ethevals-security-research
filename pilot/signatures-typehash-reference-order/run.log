@@ -1,0 +1,10 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 158.42ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testControlSortedTypesAccepted() (gas: 544265)
+[PASS] testWalletSignatureRejected() (gas: 544275)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.35ms (1.67ms CPU time)
+
+Ran 1 test suite in 105.63ms (1.35ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

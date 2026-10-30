@@ -1,0 +1,74 @@
+{
+ "compiler-legacy-init-order": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(alice)",
+  "glm": "MISS(alice)"
+ },
+ "compiler-eval-order-self-transfer": {
+  "opus": "ERR:EmptyReply: finish_reason=cont",
+  "gpt": "ok",
+  "kimi": "MISS(140)",
+  "glm": "MISS(140)"
+ },
+ "compiler-tuple-assignment-self-transfer": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "MISS(140)",
+  "kimi": "MISS(140)"
+ },
+ "compiler-transient-clear-collision": {
+  "opus": "ok",
+  "kimi": "MISS(no)",
+  "gpt": "ok",
+  "glm": "MISS(no)"
+ },
+ "upgrades-oz4-to-oz5-initializer": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "ERR:EmptyReply: finish_reason=leng",
+  "kimi": "ok"
+ },
+ "upgrades-stateless-parent-gap": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(100)",
+  "glm": "MISS(100)"
+ },
+ "signatures-eip712-proxy-domain": {
+  "opus": "ok",
+  "gpt": "ok",
+  "glm": "ERR:EmptyReply: finish_reason=leng",
+  "kimi": "ok"
+ },
+ "signatures-packed-array-typed-data": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "forwarder-multicall-suffix-oz5": {
+  "opus": "ERR:EmptyReply: finish_reason=cont",
+  "gpt": "ok",
+  "glm": "MISS(yes)",
+  "kimi": "ok"
+ },
+ "evm-try-catch-empty-return": {
+  "opus": "ok",
+  "gpt": "ok",
+  "kimi": "MISS(yes)",
+  "glm": "ok"
+ },
+ "evm-transfer-refund-to-safe": {
+  "opus": "ERR:EmptyReply: finish_reason=cont",
+  "gpt": "ok",
+  "glm": "ok",
+  "kimi": "MISS(no)"
+ },
+ "compiler-memory-bytes-delete": {
+  "opus": "MISS(alice)",
+  "gpt": "ok",
+  "kimi": "MISS(alice)",
+  "glm": "MISS(alice)"
+ }
+}

@@ -1,0 +1,13 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+cache_path = "cache"
+solc = "0.5.16"
+evm_version = "istanbul"
+via_ir = false
+optimizer = true
+optimizer_runs = 200
+remappings = ["uni/=../deps/uniswap-v2/"]
+allow_paths = ["../deps"]
+

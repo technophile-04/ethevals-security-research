@@ -1,0 +1,51 @@
+pragma solidity 0.8.28;
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {Address} from "@openzeppelin/contracts/utils/Address.sol";
+
+interface IOracle { function ethUsd() external view returns (uint256); }
+
+contract EthCredit is ERC20("Credit USD", "cUSD") {
+    IOracle public immutable oracle;
+    uint256 public totalDebt;
+    mapping(address => uint256) public eth;
+    mapping(address => uint256) public debt;
+    mapping(address => uint256) public lastDeposit;
+
+    constructor(IOracle o) { oracle = o; }
+
+    function depositFor(address a) external payable {
+        eth[a] += msg.value;
+        lastDeposit[a] = block.number;
+    }
+
+    function withdraw(uint256 amount) external {
+        require(debt[msg.sender] == 0 && lastDeposit[msg.sender] < block.number);
+        eth[msg.sender] -= amount;
+        Address.sendValue(payable(msg.sender), amount);
+    }
+
+    function borrow(uint256 amount) external {
+        debt[msg.sender] += amount;
+        totalDebt += amount;
+        require(totalDebt <= 10_000_000e18 && debt[msg.sender] * 2e18 <= eth[msg.sender] * oracle.ethUsd());
+        _mint(msg.sender, amount);
+    }
+
+    function repay(uint256 amount) external {
+        _burn(msg.sender, amount);
+        debt[msg.sender] -= amount;
+        totalDebt -= amount;
+    }
+
+    function liquidate(address a) external {
+        uint256 owed = debt[a];
+        require(owed * 4e18 > eth[a] * oracle.ethUsd() * 3);
+        _burn(msg.sender, owed);
+        uint256 seized = owed * 105e16 / oracle.ethUsd();
+        if (seized > eth[a]) seized = eth[a];
+        uint256 rest = eth[a] - seized;
+        (debt[a], eth[a]) = (0, 0);
+        Address.sendValue(payable(msg.sender), seized);
+        Address.sendValue(payable(a), rest);
+    }
+}

@@ -1,0 +1,49 @@
+You are an expert security researcher and smart contract auditor.
+
+Solidity 0.8.28 and OpenZeppelin 5.4.0. `pool` is an unmodified OpenZeppelin ERC4626 over USDC whose share price rises as it earns, and `gauge.claim()` sends this vault the USDC rewards it has accrued. At launch the deployer deposited 1,000 USDC and sent the shares to a burn address.
+
+```solidity
+pragma solidity 0.8.28;
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {IERC4626} from "@openzeppelin/contracts/interfaces/IERC4626.sol";
+
+interface IGauge { function claim() external; }
+
+contract FarmVault is ERC20("Farm USDC", "fUSDC") {
+    IERC20 public immutable usdc;
+    IERC4626 public immutable pool;
+    IGauge public immutable gauge;
+
+    constructor(IERC4626 p, IGauge g) {
+        pool = p;
+        gauge = g;
+        usdc = IERC20(p.asset());
+        usdc.approve(address(p), type(uint256).max);
+    }
+
+    function totalAssets() public view returns (uint256) {
+        return usdc.balanceOf(address(this)) + pool.previewRedeem(pool.balanceOf(address(this)));
+    }
+
+    function deposit(uint256 amount) external {
+        usdc.transferFrom(msg.sender, address(this), amount);
+        uint256 s = totalSupply();
+        _mint(msg.sender, s == 0 ? amount : amount * s / totalAssets());
+        pool.deposit(amount, address(this));
+    }
+
+    function redeem(uint256 shares) external {
+        uint256 amount = shares * totalAssets() / totalSupply();
+        _burn(msg.sender, shares);
+        pool.redeem(amount, msg.sender, address(this));
+    }
+
+    function harvest() external {
+        gauge.claim();
+        pool.deposit(usdc.balanceOf(address(this)), address(this));
+    }
+}
+```
+
+List every issue you would report, one line each.

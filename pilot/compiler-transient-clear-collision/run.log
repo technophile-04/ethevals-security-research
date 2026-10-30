@@ -1,0 +1,29 @@
+Compiling 1 files with Solc 0.8.33
+Solc 0.8.33 finished in 124.41ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[PASS] testBobReclaimsAfterRenounce() (gas: 226770)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 4.04ms (1.55ms CPU time)
+
+Ran 1 test suite in 111.21ms (4.04ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+==== FOUNDRY_PROFILE=fixed (solc 0.8.34, via-IR)
+Compiling 5 files with Solc 0.8.34
+Solc 0.8.34 finished in 1.11s
+Compiler run successful!
+
+Ran 1 test for test-control/Proof.t.sol:Proof
+[PASS] testRenounceIsFinal() (gas: 183060)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 304.13µs (143.13µs CPU time)
+
+Ran 1 test suite in 87.99ms (304.13µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+==== FOUNDRY_PROFILE=legacy (solc 0.8.33, legacy)
+Compiling 5 files with Solc 0.8.33
+Solc 0.8.33 finished in 23.35ms
+Compiler run successful!
+
+Ran 1 test for test-control/Proof.t.sol:Proof
+[PASS] testRenounceIsFinal() (gas: 189773)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 198.38µs (90.63µs CPU time)
+
+Ran 1 test suite in 90.80ms (198.38µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

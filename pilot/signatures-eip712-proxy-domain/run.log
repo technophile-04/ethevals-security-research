@@ -1,0 +1,12 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 207.24ms
+Compiler run successful!
+
+Ran 4 tests for test/Proof.t.sol:Proof
+[PASS] testFullNameAccepted() (gas: 1186447)
+[PASS] testLongNameDirectDeployReportedCorrectly() (gas: 974041)
+[PASS] testReportedDomainRejected() (gas: 1168720)
+[PASS] testShortNameReportedCorrectly() (gas: 1083380)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 4.40ms (12.36ms CPU time)
+
+Ran 1 test suite in 109.61ms (4.40ms CPU time): 4 tests passed, 0 failed, 0 skipped (4 total tests)

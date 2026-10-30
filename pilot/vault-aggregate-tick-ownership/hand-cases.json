@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "want": "right",
+      "reply": "The pool key identifies all liquidity owned by the shared manager at those ticks, so assets includes liquidity belonging to other vaults."
+    },
+    {
+      "want": "right",
+      "reply": "Pricing shares from aggregate manager liquidity overvalues this vault and undercredits the new deposit."
+    },
+    {
+      "want": "right",
+      "reply": "The ownership boundary is missing from the asset lookup: the shared tick position is larger than this vault's claim."
+    },
+    {
+      "want": "wrong",
+      "reply": "Either a packed-hash collision or the shared position accounting explains the missing shares."
+    },
+    {
+      "want": "wrong",
+      "reply": "The first depositor donates assets until a later deposit rounds down to zero shares."
+    },
+    {
+      "want": "wrong",
+      "reply": "abi.encodePacked omits field boundaries, allowing different managers and tick ranges to collide and corrupt the vault price."
+    }
+  ]
+}

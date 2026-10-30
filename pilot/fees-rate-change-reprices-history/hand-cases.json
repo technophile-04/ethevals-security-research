@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "want": "right",
+      "reply": "Changing rate without collecting first charges the new percentage for time that elapsed under the old rate."
+    },
+    {
+      "want": "right",
+      "reply": "setRate leaves last unchanged, so collect applies 9% to the day that accrued at 1%."
+    },
+    {
+      "want": "right",
+      "reply": "The fee period lacks a settlement boundary when its price changes, causing an eight-asset overcharge."
+    },
+    {
+      "want": "wrong",
+      "reply": "The loss comes from either a manipulated timestamp or charging the new fee for old time."
+    },
+    {
+      "want": "wrong",
+      "reply": "collect can be called twice in the same block to charge the same day twice."
+    },
+    {
+      "want": "wrong",
+      "reply": "The contract trusts block.timestamp, so a validator can advance the clock and cause an excessive daily fee."
+    }
+  ]
+}

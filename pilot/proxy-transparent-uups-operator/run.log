@@ -1,0 +1,8 @@
+Compiling 13 files with Solc 0.8.24
+Solc 0.8.24 finished in 13.44ms
+Error: Compiler run failed:
+Error (7920): Identifier not found or not unique.
+ --> test/Proof.t.sol:9:49:
+  |
+9 |  function initialize(address operator) external initializer {_transferOwnership(operator);}
+  |                                                 ^^^^^^^^^^^

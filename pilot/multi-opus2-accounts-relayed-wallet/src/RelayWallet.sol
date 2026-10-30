@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.28;
+import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import {IERC1271} from "@openzeppelin/contracts/interfaces/IERC1271.sol";
+
+contract RelayWallet {
+    address public immutable owner;
+    mapping(uint256 => uint256) public nonces;
+
+    event Failed(uint256 lane, uint256 nonce, bytes reason);
+
+    constructor(address o) { owner = o; }
+
+    receive() external payable {}
+
+    function exec(uint256 lane, address to, uint256 value, bytes calldata data, bytes calldata sig) external {
+        uint256 n = nonces[lane]++;
+        bytes32 h = keccak256(abi.encode(block.chainid, address(this), n, to, value, data));
+        if (sig.length == 65) {
+            require(ECDSA.recover(h, sig) == owner, "bad signature");
+        } else {
+            (address signer, bytes memory inner) = abi.decode(sig, (address, bytes));
+            require(IERC1271(signer).isValidSignature(h, inner) == IERC1271.isValidSignature.selector, "bad signature");
+        }
+        (bool ok, bytes memory reason) = to.call{value: value}(data);
+        if (!ok) emit Failed(lane, n, reason);
+    }
+}

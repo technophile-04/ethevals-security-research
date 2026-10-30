@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "want": "right",
+      "reply": "The 20-decimal nominal ratio is compared with an 18-decimal threshold, so the collateral check is 100 times too weak."
+    },
+    {
+      "want": "right",
+      "reply": "adjust fails to normalize nominalRatio to the scale of minimum and therefore accepts the 110% position."
+    },
+    {
+      "want": "right",
+      "reply": "The health requirement and the reported ratio use different units, so the apparent safety check admits a liquidatable position."
+    },
+    {
+      "want": "wrong",
+      "reply": "Either accepting a zero logo or the ratio scale mismatch exposes the position to loss."
+    },
+    {
+      "want": "wrong",
+      "reply": "The checked subtraction underflows and wraps collateral to a large value."
+    },
+    {
+      "want": "wrong",
+      "reply": "The constructor omits a zero-address check for logo, so liquidation sends the user collateral to the zero address."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+ {
+  "id": "compiler-legacy-init-order",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing this fee vault before launch. It is compiled with Solidity 0.8.30, optimizer on, legacy pipeline (no via-IR). `Ownable` is OpenZeppelin Contracts 5.4.\n\n```solidity\ncontract FeeVault is Ownable {\n    address public feeRecipient = owner();\n\n    constructor() Ownable(msg.sender) {}\n\n    function collectFees() external {\n        payable(feeRecipient).transfer(address(this).balance);\n    }\n}\n```\n\nAlice's EOA deploys it. Right after deployment, what does `feeRecipient()` return? Answer Alice's address or the zero address, then explain in one sentence.",
+  "answer": "The zero address. The legacy pipeline runs every state-variable initializer in the hierarchy before any constructor, so `owner()` still reads 0 when `feeRecipient` is set, and `Ownable`'s constructor only sets `_owner` afterwards. (Under via-IR the same source gives Alice's address.)",
+  "grading": "pattern: starts with \"zero\" or \"the zero address\" (also accept \"address(0)\" / \"0x0\")"
+ },
+ {
+  "id": "compiler-eval-order-self-transfer",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing this token, compiled with Solidity 0.8.30, optimizer on, legacy pipeline (no via-IR).\n\n```solidity\nmapping(address => uint256) public balanceOf;\n\nfunction transfer(address to, uint256 amount) external {\n    balanceOf[to] = balanceOf[to] + _debit(msg.sender, amount);\n}\n\nfunction _debit(address from, uint256 amount) internal returns (uint256) {\n    balanceOf[from] -= amount;\n    return amount;\n}\n```\n\nAlice holds 100 tokens and calls `transfer(alice, 40)`, sending to herself. What is `balanceOf(alice)` afterwards? Answer with the number only.",
+  "answer": "100. The legacy code generator evaluates the right operand of `+` first, so `_debit` runs (100 \u2192 60) before `balanceOf[to]` is read (60), and 60 + 40 = 100. The same source compiled via-IR evaluates left to right, reads 100 before the debit, and ends at 140.",
+  "grading": "pattern: starts with \"100\""
+ },
+ {
+  "id": "compiler-tuple-assignment-self-transfer",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing this token, compiled with Solidity 0.8.30, optimizer on.\n\n```solidity\nmapping(address => uint256) public balanceOf;\n\nfunction transfer(address to, uint256 amount) external {\n    uint256 fromBal = balanceOf[msg.sender];\n    uint256 toBal = balanceOf[to];\n    require(fromBal >= amount, \"balance\");\n    (balanceOf[msg.sender], balanceOf[to]) = (fromBal - amount, toBal + amount);\n}\n```\n\nAlice holds 100 tokens and calls `transfer(alice, 40)`, sending to herself. What is `balanceOf(alice)` afterwards? Answer with the number only.",
+  "answer": "60. Both sides of the tuple are computed from the cached balances (60, 140). Solidity then writes the components from right to left, so `balanceOf[to] = 140` is written first and `balanceOf[msg.sender] = 60` overwrites it. Alice loses 40 tokens.",
+  "grading": "pattern: starts with \"60\""
+ },
+ {
+  "id": "compiler-transient-clear-collision",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing this vault, compiled with Solidity 0.8.33, via-IR, optimizer on, EVM version cancun. `Ownable2Step` is OpenZeppelin Contracts 5.4.\n\n```solidity\ncontract Vault is Ownable2Step {\n    address transient activeCaller;\n\n    constructor() Ownable(msg.sender) {}\n\n    function run() external {\n        activeCaller = msg.sender;\n        // ... work that reads activeCaller ...\n        delete activeCaller;\n    }\n}\n```\n\nThe deployer calls `transferOwnership(bob)`, Bob calls `acceptOwnership()`, and later Bob calls `renounceOwnership()`. Can Bob then call `acceptOwnership()` again and become owner? Answer yes or no, then explain in one sentence.",
+  "answer": "Yes. Under the TransientStorageClearingHelperCollision bug (0.8.28 to 0.8.33, via-IR), `delete activeCaller` and Ownable2Step's `delete _pendingOwner` share one `set_to_zero` helper. In this contract the shared helper clears transient storage, so `_pendingOwner` is never cleared. Bob stays pending after accepting and after renouncing, and can accept again.",
+  "grading": "pattern: starts with \"yes\""
+ },
+ {
+  "id": "upgrades-oz4-to-oz5-initializer",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a vault upgrade. V1 uses OpenZeppelin Contracts Upgradeable 4.9.6 (`Initializable`, `OwnableUpgradeable`, `UUPSUpgradeable`) and was initialized at launch with the team's Safe as owner. V2 is the same vault rebuilt on OpenZeppelin Contracts Upgradeable 5.4, keeping\n\n```solidity\nfunction initialize(address owner_) external initializer {\n    __Ownable_init(owner_);\n    __UUPSUpgradeable_init();\n}\n```\n\nThe Safe upgrades the proxy to V2 and passes no call data. Afterwards, can a stranger call `initialize(stranger)` and become owner? Answer yes or no, then explain in one sentence.",
+  "answer": "Yes. OZ 5.x keeps the initializer version and the owner in ERC-7201 namespaced slots, which are empty in this proxy, while 4.9.6 kept them in slot 0 and slot 51. Right after the upgrade, `initializer` sees version 0 and `owner()` returns the zero address, so the first caller of `initialize` takes ownership.",
+  "grading": "pattern: starts with \"yes\""
+ },
+ {
+  "id": "upgrades-stateless-parent-gap",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a V2 upgrade of a UUPS vault built on OpenZeppelin Contracts Upgradeable 4.9.6.\n\n```solidity\ncontract VaultV1 is Initializable, OwnableUpgradeable, UUPSUpgradeable {\n    mapping(address => uint256) public balanceOf;\n    // ...\n}\n\ncontract VaultV2 is Initializable, OwnableUpgradeable, UUPSUpgradeable, MulticallUpgradeable {\n    mapping(address => uint256) public balanceOf;\n    // ... same functions as V1\n}\n```\n\nV2 only appends `MulticallUpgradeable` so users can batch calls. Alice's V1 balance is 100. The owner upgrades the proxy to V2 with no migration. What does `balanceOf(alice)` return afterwards? Answer with the number only.",
+  "answer": "0. `MulticallUpgradeable` 4.9.6 has no variables but still declares `uint256[50] private __gap`, so appending it moves `balanceOf` from slot 201 to slot 251. The owner is unaffected.",
+  "grading": "pattern: starts with \"0\""
+ },
+ {
+  "id": "signatures-eip712-proxy-domain",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a share token. Its implementation inherits OpenZeppelin Contracts 5.4 `ERC20Permit` from the non-upgradeable package, constructed with `ERC20(\"Liquid Restaked Ether Vault Share\", \"lrVS\")` and `ERC20Permit(\"Liquid Restaked Ether Vault Share\")`. Users reach it through an ERC1967Proxy whose `initialize` only mints. The front end builds each permit's EIP-712 domain from the token's ERC-5267 `eip712Domain()` read through the proxy, and holders sign that domain. Does `permit` on the proxy accept these signatures? Answer yes or no, then explain in one sentence.",
+  "answer": "No. The name is 33 bytes, too long for OZ's `ShortString` immutable, so the constructor writes it to the `_nameFallback` storage variable in the implementation's own storage. Through the proxy, `eip712Domain()` therefore reports an empty name. `_domainSeparatorV4` still uses the immutable `_hashedName` of the full name, so signatures over the reported domain fail.",
+  "grading": "pattern: starts with \"no\""
+ },
+ {
+  "id": "signatures-packed-array-typed-data",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a basket-order contract that inherits OpenZeppelin Contracts 5.4 `EIP712`, with `ORDER_TYPEHASH = keccak256(\"Order(address maker,address[] tokens,uint256[] amounts,uint256 nonce)\")`.\n\n```solidity\nfunction digest(Order calldata o) public view returns (bytes32) {\n    return _hashTypedDataV4(keccak256(abi.encode(\n        ORDER_TYPEHASH, o.maker,\n        keccak256(abi.encodePacked(o.tokens)),\n        keccak256(abi.encodePacked(o.amounts)),\n        o.nonce)));\n}\n```\n\nA maker signs an Order for two tokens with MetaMask's `eth_signTypedData_v4`, using the contract's domain. Does `ECDSA.recover(digest(order), signature)` return the maker's address? Answer yes or no, then explain in one sentence.",
+  "answer": "Yes. `abi.encodePacked` packs top-level arguments tightly, but pads each element of an array argument to 32 bytes. So `keccak256(abi.encodePacked(address[]))` is exactly EIP-712's array encoding (keccak of the concatenated 32-byte `encodeData` of the elements).",
+  "grading": "pattern: starts with \"yes\""
+ },
+ {
+  "id": "forwarder-multicall-suffix-oz5",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a treasury that inherits OpenZeppelin Contracts 5.4 `ERC2771Context` and `Multicall`, trusts OpenZeppelin's `ERC2771Forwarder`, and guards `payout()` with `require(_msgSender() == owner)`. A stranger signs a valid forward request to the treasury whose data is `multicall([abi.encodePacked(payout.selector, owner)])`, so the only batched item ends with the owner's 20-byte address, and relays it through the forwarder. Does `payout()` run? Answer yes or no, then explain in one sentence.",
+  "answer": "No. Since the December 2023 fix, OZ's `Multicall` copies the forwarder's real 20-byte suffix (the stranger) onto every batched item before its delegatecall. `_msgSender()` reads the last 20 bytes, so it resolves to the stranger and the owner check fails.",
+  "grading": "pattern: starts with \"no\""
+ },
+ {
+  "id": "evm-try-catch-empty-return",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a lending market compiled with Solidity 0.8.30. Borrowers may register a notification hook, and liquidation calls it inside try/catch so that a broken hook cannot block liquidation.\n\n```solidity\nfunction liquidate(address borrower) external {\n    uint256 d = debt[borrower];\n    delete debt[borrower];\n    address hook = hookOf[borrower];\n    if (hook != address(0)) {\n        try IHook(hook).onLiquidation(borrower, d) returns (bytes4) {} catch {}\n    }\n    // seize collateral, pay liquidator\n}\n```\n\nA borrower calls `setHook` with the address of their own EOA. Does `liquidate(borrower)` succeed? Answer yes or no, then explain in one sentence.",
+  "answer": "No. Since 0.8.10 the compiler skips the code-existence check when return data is expected, so the call to the EOA \"succeeds\" with empty return data. Decoding the `bytes4` then fails in the calling contract, outside the catch, and `liquidate` reverts. A borrower can make their position impossible to liquidate.",
+  "grading": "pattern: starts with \"no\""
+ },
+ {
+  "id": "evm-transfer-refund-to-safe",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a marketplace on Ethereum mainnet. Its `buy()` refunds overpayment with `payable(msg.sender).transfer(msg.value - price)`. A buyer uses a Safe v1.4.1 (standard SafeProxy, one owner, threshold 1) and calls `buy()` through the Safe's `execTransaction` with 1 ETH for a 0.9 ETH item. The transaction has no access list. Does the purchase succeed, with the Safe receiving its 0.1 ETH refund? Answer yes or no, then explain in one sentence.",
+  "answer": "Yes. The Safe is mid-execution when the refund arrives, so the proxy's storage slot 0 and the singleton's address are already warm. The proxy's SLOAD and DELEGATECALL cost 100 gas each, and the whole receive path (about 1,850 gas in the proof) fits the 2,300 stipend. A Safe that is cold in the transaction would run out of gas.",
+  "grading": "pattern: starts with \"yes\""
+ },
+ {
+  "id": "compiler-memory-bytes-delete",
+  "file": "pilot-opus",
+  "instruction": "You are reviewing a bridge's message builder, compiled with Solidity 0.8.30, optimizer on, legacy pipeline (no via-IR).\n\n```solidity\nfunction build(address recipient, uint256 amount)\n    external pure returns (bytes memory payload)\n{\n    payload = abi.encodePacked(uint8(1), recipient, amount); // flag, recipient, amount\n    delete payload[0];                                      // clear the flag\n}\n```\n\nThe relayer reads the recipient from bytes 1 to 20 of `payload`. After `build(alice, 5 ether)`, which recipient does the payload carry? Answer Alice's address or the zero address, then explain in one sentence.",
+  "answer": "The zero address. The legacy code generator implements `delete` on a memory `bytes` element with a full 32-byte MSTORE of zero, not MSTORE8. That clears bytes 0 to 31, which wipes the whole recipient (bytes 1 to 20) and the top 11 bytes of the amount (already zero for 5 ether). Fixed in 0.8.37. Via-IR is unaffected.",
+  "grading": "pattern: starts with \"zero\" or \"the zero address\""
+ }
+]

@@ -1,0 +1,9 @@
+Compiling 13 files with Solc 0.5.16
+Solc 0.5.16 finished in 316.13ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[PASS] testLiquidityMintIncludes58ProtocolShares() (gas: 4843129)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 405.21µs (245.83µs CPU time)
+
+Ran 1 test suite in 936.67µs (405.21µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

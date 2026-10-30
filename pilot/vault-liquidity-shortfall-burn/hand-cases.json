@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "want": "right",
+      "reply": "The full share amount is burned for a partial payout, so the remaining locked assets lose their owner claim."
+    },
+    {
+      "want": "right",
+      "reply": "redeem reduces shares by n rather than the shares represented by got, even when got is smaller."
+    },
+    {
+      "want": "right",
+      "reply": "Temporary strategy illiquidity becomes a permanent user loss because a short withdrawal still consumes the whole claim."
+    },
+    {
+      "want": "wrong",
+      "reply": "Either reentrancy before the share update or the partial withdrawal burns the user claim."
+    },
+    {
+      "want": "wrong",
+      "reply": "The ERC20 transfer returns false and the vault ignores the failure."
+    },
+    {
+      "want": "wrong",
+      "reply": "The external Reserve call precedes the share decrement, allowing recursive redemptions to consume the vault balance."
+    }
+  ]
+}

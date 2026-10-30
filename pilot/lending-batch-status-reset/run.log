@@ -1,0 +1,8 @@
+
+Ran 3 tests for test/Proof.t.sol:Proof
+[PASS] testBorrowAloneReverts() (gas: 71297)
+[PASS] testBorrowThenUnknownOpSkipsHealthCheck() (gas: 77025)
+[PASS] testUnknownOpBeforeBorrowStillChecked() (gas: 72973)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 5.72ms (3.69ms CPU time)
+
+Ran 1 test suite in 112.89ms (5.72ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

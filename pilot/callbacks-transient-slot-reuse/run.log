@@ -1,0 +1,5 @@
+[PASS] testDirectCallRejected() (gas: 9601)
+[PASS] testMintedAmountBecomesTheTrustedCaller() (gas: 174732)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 13.82ms (6.64ms CPU time)
+
+Ran 1 test suite in 128.90ms (13.82ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

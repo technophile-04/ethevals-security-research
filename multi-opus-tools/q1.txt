@@ -1,0 +1,55 @@
+You are an expert security researcher and smart contract auditor.
+
+Solidity 0.8.28 and OpenZeppelin 5.4.0; `asset` is a standard 18-decimal ERC20. Yield arrives as plain transfers from a trusted strategy. The treasury is owed 10% of each rise in assets per share and collects it with `claimFees`.
+
+```solidity
+pragma solidity 0.8.28;
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+contract FeeVault is ERC20("Fee Vault", "FV") {
+    IERC20 public immutable asset;
+    uint256 public fees;
+    uint256 public mark = 1e18;
+
+    constructor(IERC20 a) { asset = a; }
+
+    function held() public view returns (uint256) {
+        return asset.balanceOf(address(this)) - fees;
+    }
+
+    function price() public view returns (uint256) {
+        return held() * 1e18 / totalSupply();
+    }
+
+    function chargeFee() public {
+        uint256 p = price();
+        if (p <= mark) return;
+        fees += totalSupply() * (p - mark) / 1e18 / 10;
+        mark = price();
+    }
+
+    function claimFees(address to) external {
+        uint256 f = fees;
+        fees = 0;
+        asset.transfer(to, f);
+    }
+
+    function deposit(uint256 amount) external {
+        uint256 s = totalSupply();
+        uint256 shares = s == 0 ? amount : amount * s / held();
+        asset.transferFrom(msg.sender, address(this), amount);
+        _mint(msg.sender, shares);
+        mark = price();
+    }
+
+    function redeem(uint256 shares) external {
+        chargeFee();
+        uint256 out = shares * held() / totalSupply();
+        _burn(msg.sender, shares);
+        asset.transfer(msg.sender, out);
+    }
+}
+```
+
+List every issue you would report, one line each.

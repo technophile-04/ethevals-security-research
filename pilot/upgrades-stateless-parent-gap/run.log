@@ -1,0 +1,9 @@
+Compiling 21 files with Solc 0.8.24
+Solc 0.8.24 finished in 291.91ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[PASS] testAppendedMulticallMovesBalances() (gas: 1699746)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 257.13µs (111.50µs CPU time)
+
+Ran 1 test suite in 90.68ms (257.13µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

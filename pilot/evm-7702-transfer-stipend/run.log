@@ -1,0 +1,10 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 32.18ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testHeavyReceiveStillFails() (gas: 140132)
+[PASS] testTransferToDelegatedEoaSucceeds() (gas: 145756)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 521.21µs (775.38µs CPU time)
+
+Ran 1 test suite in 107.95ms (521.21µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

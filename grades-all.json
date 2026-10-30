@@ -1,0 +1,506 @@
+{
+ "accounts-7702-eoa-only-flashloan": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-7702-delegation-survives-revert": {
+  "glm": "ok",
+  "kimi": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-7702-init-frontrun": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-7702-chainid-zero-revocation": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-7702-self-sponsored-nonce": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-7702-redelegation-initializable": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok"
+ },
+ "accounts-7702-delegate-unguarded-call": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok"
+ },
+ "accounts-4337-validuntil-zero": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-4337-v07-postop-charge": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-4337-unused-gas-penalty": {
+  "kimi": "ok",
+  "glm": "MISS(yes)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-4337-unstaked-paymaster-context": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-1271-permit2-cross-account-replay": {
+  "kimi": "ok",
+  "glm": "MISS(no)",
+  "gpt": "ok",
+  "opus": "ok"
+ },
+ "accounts-7739-typeddatasign-domain": {
+  "kimi": "MISS(account)",
+  "glm": "MISS(account)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-7579-fallback-sender": {
+  "opus": "ok",
+  "kimi": "ok",
+  "glm": "ok",
+  "gpt": "ok"
+ },
+ "accounts-safe-guard-module-path": {
+  "kimi": "ok",
+  "glm": "MISS(yes)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "accounts-safe-delegatecall-slot0": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "kimi": "ok",
+  "glm": "ok",
+  "gpt": "ok"
+ },
+ "signatures-permit2-smart-account-replay": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-safe-1271-no-cross-safe-replay": {
+  "kimi": "ok",
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "glm": "ok",
+  "gpt": "ok"
+ },
+ "signatures-oz-ecdsa-signature-as-key": {
+  "kimi": "ok",
+  "glm": "MISS(yes)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-safe-legacy-domain-cross-chain": {
+  "kimi": "ok",
+  "glm": "MISS(no)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-oz-eip712-fork-recompute": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-permit2-unordered-nonce": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-weth-phantom-permit": {
+  "kimi": "ok",
+  "glm": "MISS(no)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-permit2-signaturetransfer-frontrun": {
+  "kimi": "MISS(yes)",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-permit2-lockdown-leaves-signature": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-dai-permit-expiry-zero": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-safe-domain-hash-fields": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-safe-errored-signature-still-live": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-poisoning-real-usdc-event": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-5792-atomic-not-one-tx": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-7702-chainid-zero": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "signatures-safe-personal-sign-v": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-exact-output-rate-scaling": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-idle-balance-subtraction": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-conservative-liquidity-rounding": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-virtual-shares-zero-share-deposit": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-virtual-offset-oracle-price": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-inverse-price-zero-solvency": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-empty-market-seed-order": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-accumulator-muldiv-rounding": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-tick-crossing-input-threshold": {
+  "kimi": "ok",
+  "glm": "ok",
+  "gpt": "ok",
+  "opus": "ok"
+ },
+ "tokens-zero-invariant-reinitialization": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-double-entry-rescue": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-convert-assets-mint-quote": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-steth-exact-receipt": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "tokens-wrapped-staking-unit-reuse": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-selfdestruct-old-implementation": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok"
+ },
+ "upgrades-handover-retained-role": {
+  "kimi": "ok",
+  "glm": "ok",
+  "gpt": "ok",
+  "opus": "ok"
+ },
+ "upgrades-v5-proxyadmin-constructor": {
+  "kimi": "ok",
+  "glm": "MISS(yes)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-v56-empty-initialization": {
+  "kimi": "MISS(yes)",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-vault-owner-not-proxyadmin": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-constructor-initializer-version": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-namespace-nested-struct-growth": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-storage-to-immutable": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-metamorphic-after-cancun": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-safe-module-threshold": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-explorer-hidden-delegation": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-selfdestruct-still-transfers-eth": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-create2-front-run-owner": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "upgrades-diamond-private-guard-slot": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-hook-forwarder-authentication": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-hook-rounding-composition": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-v4-flash-liquidity-composability": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-fresh-composed-feed": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-read-only-staticcall": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-permissionless-factory-trust": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-global-leverage-window": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-donation-health-check": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-transient-lock-batch": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-transient-lock-delegatecall": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "defi-transient-low-gas-callback": {
+  "kimi": "ok",
+  "glm": "ok",
+  "gpt": "ok",
+  "opus": "ok"
+ },
+ "defi-proposal-age-flash-votes": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-transient-stipend-write": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok"
+ },
+ "evm-compiler-assembly-write-removal": {
+  "kimi": "ok",
+  "glm": "MISS(yes)",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-compiler-tuple-cleanup": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "gpt": "ok"
+ },
+ "evm-compiler-conditional-stop": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-vyper-cross-function-lock": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "kimi": "ok",
+  "glm": "MISS(yes)",
+  "gpt": "ok"
+ },
+ "evm-multicall-reuses-value": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-p256-infinity-result": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-compiler-dirty-byte-push": {
+  "opus": "ERR:EmptyReply: finish_reason=content_filter",
+  "kimi": "ok",
+  "glm": "ok",
+  "gpt": "ok"
+ },
+ "evm-return-data-gas-cap": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-insufficient-gas-reward-update": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-empty-code-token-success": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ },
+ "evm-selfdestruct-old-implementation": {
+  "kimi": "ok",
+  "glm": "ok",
+  "opus": "ok",
+  "gpt": "ok"
+ }
+}

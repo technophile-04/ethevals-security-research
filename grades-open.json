@@ -1,0 +1,338 @@
+{
+ "accounts-7702-eoa-only-flashloan": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "accounts-7702-chainid-zero-revocation": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "accounts-7702-init-frontrun": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "accounts-7702-delegation-survives-revert": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "accounts-7702-redelegation-initializable": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "accounts-7702-self-sponsored-nonce": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "accounts-7702-delegate-unguarded-call": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "accounts-4337-validuntil-zero": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "accounts-4337-unused-gas-penalty": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(yes)"
+ },
+ "accounts-4337-unstaked-paymaster-context": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "accounts-1271-permit2-cross-account-replay": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(no)"
+ },
+ "accounts-7739-typeddatasign-domain": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(account)"
+ },
+ "accounts-4337-v07-postop-charge": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "accounts-7579-fallback-sender": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "accounts-safe-guard-module-path": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(yes)"
+ },
+ "signatures-permit2-smart-account-replay": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "accounts-safe-delegatecall-slot0": {
+  "kimi": "JUDGE",
+  "glm": "JUDGE"
+ },
+ "signatures-safe-1271-no-cross-safe-replay": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-oz-ecdsa-signature-as-key": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(yes)"
+ },
+ "signatures-safe-legacy-domain-cross-chain": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(no)"
+ },
+ "signatures-oz-eip712-fork-recompute": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-permit2-unordered-nonce": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-weth-phantom-permit": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(no)"
+ },
+ "signatures-permit2-signaturetransfer-frontrun": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-permit2-lockdown-leaves-signature": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-dai-permit-expiry-zero": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "signatures-safe-domain-hash-fields": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "JUDGE"
+ },
+ "signatures-safe-errored-signature-still-live": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-5792-atomic-not-one-tx": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-7702-chainid-zero": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "signatures-poisoning-real-usdc-event": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "tokens-exact-output-rate-scaling": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "signatures-safe-personal-sign-v": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "tokens-idle-balance-subtraction": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "tokens-virtual-shares-zero-share-deposit": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-virtual-offset-oracle-price": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-conservative-liquidity-rounding": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "tokens-inverse-price-zero-solvency": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "tokens-empty-market-seed-order": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-accumulator-muldiv-rounding": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ERR:EmptyReply: finish_reason=length"
+ },
+ "tokens-tick-crossing-input-threshold": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-zero-invariant-reinitialization": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-double-entry-rescue": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-convert-assets-mint-quote": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "tokens-wrapped-staking-unit-reuse": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-selfdestruct-old-implementation": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "tokens-steth-exact-receipt": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "upgrades-handover-retained-role": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-v5-proxyadmin-constructor": {
+  "kimi": "ok",
+  "glm": "ERR:EmptyReply: finish_reason=length"
+ },
+ "upgrades-vault-owner-not-proxyadmin": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-v56-empty-initialization": {
+  "kimi": "MISS(yes)",
+  "glm": "ok"
+ },
+ "upgrades-namespace-nested-struct-growth": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-storage-to-immutable": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-metamorphic-after-cancun": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-safe-module-threshold": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-constructor-initializer-version": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "upgrades-explorer-hidden-delegation": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-create2-front-run-owner": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-diamond-private-guard-slot": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-hook-forwarder-authentication": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "upgrades-selfdestruct-still-transfers-eth": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "defi-hook-rounding-composition": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "defi-fresh-composed-feed": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-read-only-staticcall": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-permissionless-factory-trust": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-global-leverage-window": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-v4-flash-liquidity-composability": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "defi-donation-health-check": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-transient-lock-batch": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-transient-lock-delegatecall": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-transient-low-gas-callback": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "defi-proposal-age-flash-votes": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-transient-stipend-write": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-compiler-assembly-write-removal": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(yes)"
+ },
+ "evm-compiler-tuple-cleanup": {
+  "glm": "ok",
+  "kimi": "ok"
+ },
+ "evm-compiler-conditional-stop": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-vyper-cross-function-lock": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "MISS(yes)"
+ },
+ "evm-multicall-reuses-value": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-compiler-dirty-byte-push": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-p256-infinity-result": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "evm-return-data-gas-cap": {
+  "kimi": "ok",
+  "glm": "ok"
+ },
+ "evm-empty-code-token-success": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-selfdestruct-old-implementation": {
+  "kimi": "ERR:RateLimitError: litellm.RateLimitError: ",
+  "glm": "ok"
+ },
+ "evm-insufficient-gas-reward-update": {
+  "kimi": "ok",
+  "glm": "ok"
+ }
+}

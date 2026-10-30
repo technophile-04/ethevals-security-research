@@ -1,0 +1,45 @@
+You are an expert security researcher and smart contract auditor.
+
+Solidity 0.8.28 and OpenZeppelin 5.4.0. `Market` is a lending market whose ERC20 tokens are lender balances; deposit and withdraw are omitted. A sanctioned lender's tokens must stay in escrow until the lender is cleared or the borrower releases them to the lender early. `sanctions` is a trusted oracle.
+
+```solidity
+pragma solidity 0.8.28;
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+interface ISanctions { function isSanctioned(address) external view returns (bool); }
+
+contract Escrow {
+    IERC20 public immutable market = IERC20(msg.sender);
+    address public immutable borrower;
+    address public immutable account;
+    ISanctions public immutable sanctions;
+
+    constructor(address b, address a, ISanctions s) { borrower = b; account = a; sanctions = s; }
+
+    function release() external {
+        require(msg.sender == borrower || !sanctions.isSanctioned(account), "sanctioned");
+        market.transfer(account, market.balanceOf(address(this)));
+    }
+}
+
+contract Market is ERC20("Market USDC", "mUSDC") {
+    address public immutable borrower;
+    ISanctions public immutable sanctions;
+
+    constructor(address b, ISanctions s) { borrower = b; sanctions = s; }
+
+    function blockLender(address lender) external {
+        require(sanctions.isSanctioned(lender), "not sanctioned");
+        _transfer(lender, _escrow(lender, borrower), balanceOf(lender));
+    }
+
+    function _escrow(address b, address a) internal returns (address e) {
+        bytes memory code = abi.encodePacked(type(Escrow).creationCode, abi.encode(b, a, sanctions));
+        e = address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), address(this), bytes32(0), keccak256(code))))));
+        if (e.codehash == bytes32(0)) new Escrow{salt: 0}(b, a, sanctions);
+    }
+}
+```
+
+List every issue you would report, one line each.

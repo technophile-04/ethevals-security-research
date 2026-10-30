@@ -1,0 +1,98 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 51.16ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 179399)
+[PASS] testSelfTransferEndsAt60() (gas: 156605)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 4.32ms (1.37ms CPU time)
+
+Ran 1 test suite in 127.48ms (4.32ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== FOUNDRY_PROFILE=viair
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 83.76ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 151688)
+[PASS] testSelfTransferEndsAt60() (gas: 128925)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 262.58µs (222.50µs CPU time)
+
+Ran 1 test suite in 109.35ms (262.58µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== solc 0.8.20 legacy
+Compiling 1 files with Solc 0.8.20
+Solc 0.8.20 finished in 107.34ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 179400)
+[PASS] testSelfTransferEndsAt60() (gas: 156606)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 336.33µs (254.21µs CPU time)
+
+Ran 1 test suite in 119.17ms (336.33µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== solc 0.8.20 via-IR
+Compiling 1 files with Solc 0.8.20
+Solc 0.8.20 finished in 305.16ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 156142)
+[PASS] testSelfTransferEndsAt60() (gas: 133334)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 9.07ms (388.88µs CPU time)
+
+Ran 1 test suite in 136.31ms (9.07ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== solc 0.8.24 legacy
+Compiling 1 files with Solc 0.8.24
+Solc 0.8.24 finished in 81.40ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 179400)
+[PASS] testSelfTransferEndsAt60() (gas: 156606)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.47ms (363.50µs CPU time)
+
+Ran 1 test suite in 139.97ms (2.47ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== solc 0.8.24 via-IR
+Compiling 1 files with Solc 0.8.24
+Solc 0.8.24 finished in 319.73ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 150510)
+[PASS] testSelfTransferEndsAt60() (gas: 127698)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 461.75µs (346.50µs CPU time)
+
+Ran 1 test suite in 144.41ms (461.75µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== solc 0.8.33 legacy
+Compiling 1 files with Solc 0.8.33
+Solc 0.8.33 finished in 69.78ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 179399)
+[PASS] testSelfTransferEndsAt60() (gas: 156605)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.74ms (485.25µs CPU time)
+
+Ran 1 test suite in 135.65ms (1.74ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== solc 0.8.33 via-IR
+Compiling 1 files with Solc 0.8.33
+Solc 0.8.33 finished in 93.30ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 151688)
+[PASS] testSelfTransferEndsAt60() (gas: 128925)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 594.00µs (370.42µs CPU time)
+
+Ran 1 test suite in 119.09ms (594.00µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+==== optimizer off
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 10.96ms
+Compiler run successful!
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testNormalTransfer() (gas: 307492)
+[PASS] testSelfTransferEndsAt60() (gas: 284075)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 775.63µs (318.50µs CPU time)
+
+Ran 1 test suite in 123.80ms (775.63µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

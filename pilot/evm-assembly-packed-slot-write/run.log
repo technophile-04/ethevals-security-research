@@ -1,0 +1,19 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 23.70ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[PASS] testPauseOverwritesOwner() (gas: 123745)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 163.38µs (59.71µs CPU time)
+
+Ran 1 test suite in 109.96ms (163.38µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+==== FOUNDRY_PROFILE=viair
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 76.69ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[PASS] testPauseOverwritesOwner() (gas: 120806)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 151.29µs (49.54µs CPU time)
+
+Ran 1 test suite in 108.79ms (151.29µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

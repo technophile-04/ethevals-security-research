@@ -1,0 +1,8 @@
+
+Ran 3 tests for test/Proof.t.sol:Proof
+[PASS] testInitializeV3CanNeverRunAfterwards() (gas: 845356)
+[PASS] testUpgradeSkipsV3AndQuorumIsZero() (gas: 907428)
+[PASS] testWithV3TheEmptyReceiptFails() (gas: 880766)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 4.94ms (1.70ms CPU time)
+
+Ran 1 test suite in 102.17ms (4.94ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

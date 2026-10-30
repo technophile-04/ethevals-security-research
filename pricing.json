@@ -1,0 +1,18 @@
+{
+  "anthropic/claude-opus-5-5": {
+    "input_per_token": "0.000004",
+    "output_per_token": "0.00002"
+  },
+  "openai/gpt-6.1-sol": {
+    "input_per_token": "0.000002",
+    "output_per_token": "0.00001"
+  },
+  "openrouter/moonshotai/kimi-k3.1-pro": {
+    "input_per_token": "0.000002",
+    "output_per_token": "0.00001"
+  },
+  "openrouter/z-ai/glm-5.3": {
+    "input_per_token": "8E-8",
+    "output_per_token": "0.0000036"
+  }
+}

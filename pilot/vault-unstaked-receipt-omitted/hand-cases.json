@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "want": "right",
+      "reply": "The unstaked branch creates receipts, but assets counts only cash and staked claims."
+    },
+    {
+      "want": "right",
+      "reply": "Receipt tokens from stake false remain owned by the vault but disappear from its asset valuation."
+    },
+    {
+      "want": "right",
+      "reply": "The valuation forgets one form of the same investment and sells too many shares to the next depositor."
+    },
+    {
+      "want": "wrong",
+      "reply": "The missing receipt balance or the non-upgradeable transfer library causes the valuation loss."
+    },
+    {
+      "want": "wrong",
+      "reply": "safeTransfer fails silently and the booster credits unbacked assets."
+    },
+    {
+      "want": "wrong",
+      "reply": "The proxy imports non-upgradeable SafeERC20, which writes to the implementation storage instead of the vault and loses the deposited funds."
+    }
+  ]
+}

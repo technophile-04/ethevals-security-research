@@ -1,0 +1,62 @@
+=== compiler-legacy-init-order
+[PASS] testLegacyFeeRecipientIsZero() (gas: 387894)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 5.34ms (1.11ms CPU time)
+=== compiler-eval-order-self-transfer
+[PASS] testSelfTransferLegacy() (gas: 151020)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 307.92µs (103.42µs CPU time)
+=== compiler-tuple-assignment-self-transfer
+[PASS] testNormalTransfer() (gas: 179399)
+[PASS] testSelfTransferEndsAt60() (gas: 156605)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 967.67µs (402.38µs CPU time)
+=== compiler-transient-clear-collision
+[PASS] testBobReclaimsAfterRenounce() (gas: 226770)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.30ms (1.10ms CPU time)
+=== upgrades-oz4-to-oz5-initializer
+[PASS] testOwnerReadsZeroAfterUpgrade() (gas: 1419747)
+[PASS] testStrangerInitializesV2() (gas: 1467443)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 4.69ms (977.67µs CPU time)
+=== upgrades-stateless-parent-gap
+[PASS] testAppendedMulticallMovesBalances() (gas: 1699746)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 301.92µs (138.46µs CPU time)
+=== signatures-eip712-proxy-domain
+[PASS] testFullNameAccepted() (gas: 1186447)
+[PASS] testLongNameDirectDeployReportedCorrectly() (gas: 974041)
+[PASS] testReportedDomainRejected() (gas: 1168720)
+[PASS] testShortNameReportedCorrectly() (gas: 1083380)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 14.80ms (14.49ms CPU time)
+=== signatures-packed-array-typed-data
+[PASS] testAbiEncodeOfArrayDiffers() (gas: 1948)
+[PASS] testWalletSignatureVerifies() (gas: 635464)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 8.44ms (7.36ms CPU time)
+=== forwarder-multicall-suffix-oz5
+[PASS] testControlOZ491SpoofWorks() (gas: 529928)
+[PASS] testForgedInnerSuffixIgnoredOZ54() (gas: 1285528)
+[PASS] testOwnerSignedMulticallPays() (gas: 1306357)
+[PASS] testStrangerRequestVerifies() (gas: 1256193)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 21.10ms (3.61ms CPU time)
+=== evm-try-catch-empty-return
+[PASS] testEoaHookBlocksLiquidation() (gas: 349353)
+[PASS] testRevertingHookIsCaught() (gas: 429780)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 8.31ms (251.42µs CPU time)
+=== evm-transfer-refund-to-safe
+[PASS] testRefundToCallingSafe() (gas: 3563034)
+[PASS] testTransferToColdSafeFails() (gas: 3526040)
+[PASS] testTransferToWarmSafeSucceeds() (gas: 3524463)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 985.46µs (1.28ms CPU time)
+=== compiler-memory-bytes-delete
+[PASS] testDeleteZeroesRecipient() (gas: 106614)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 153.00µs (46.67µs CPU time)
+=== evm-7702-transfer-stipend
+[PASS] testHeavyReceiveStillFails() (gas: 140132)
+[PASS] testTransferToDelegatedEoaSucceeds() (gas: 145756)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 16.03ms (1.19ms CPU time)
+=== upgrades-packed-insert
+[PASS] testInsertedFieldPacksIntoSlotZero() (gas: 656804)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 278.54µs (95.96µs CPU time)
+=== signatures-typehash-reference-order
+[PASS] testControlSortedTypesAccepted() (gas: 544265)
+[PASS] testWalletSignatureRejected() (gas: 544275)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.80ms (2.52ms CPU time)
+=== evm-assembly-packed-slot-write
+[PASS] testPauseOverwritesOwner() (gas: 123745)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 200.29µs (71.67µs CPU time)

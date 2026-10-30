@@ -1,0 +1,19 @@
+Compiling 3 files with Solc 0.8.30
+Solc 0.8.30 finished in 22.61ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[PASS] testLegacyFeeRecipientIsZero() (gas: 387894)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 153.50µs (57.67µs CPU time)
+
+Ran 1 test suite in 108.17ms (153.50µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+==== FOUNDRY_PROFILE=viair
+Compiling 3 files with Solc 0.8.30
+Solc 0.8.30 finished in 85.69ms
+Compiler run successful!
+
+Ran 1 test for test-viair/Proof.t.sol:Proof
+[PASS] testViaIRFeeRecipientIsDeployer() (gas: 398491)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 149.58µs (58.04µs CPU time)
+
+Ran 1 test suite in 108.20ms (149.58µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

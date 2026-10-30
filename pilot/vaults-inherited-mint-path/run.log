@@ -1,0 +1,7 @@
+
+Ran 2 tests for test/Proof.t.sol:Proof
+[PASS] testDepositPathsCollectAssets() (gas: 31193)
+[PASS] testInheritedMintIsFree() (gas: 73108)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 5.96ms (915.54µs CPU time)
+
+Ran 1 test suite in 111.54ms (5.96ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

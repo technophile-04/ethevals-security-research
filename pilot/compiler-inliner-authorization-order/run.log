@@ -1,0 +1,17 @@
+Compiling 1 files with Solc 0.8.20
+Solc 0.8.20 finished in 17.20ms
+Compiler run successful!
+
+Ran 1 test for test/Proof.t.sol:Proof
+[FAIL: authorization ran first] testCustomInlinerPaysBeforeAuthorization() (gas: 108434)
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 134.50µs (39.79µs CPU time)
+
+Ran 1 test suite in 792.92µs (134.50µs CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/Proof.t.sol:Proof
+[FAIL: authorization ran first] testCustomInlinerPaysBeforeAuthorization() (gas: 108434)
+
+Encountered a total of 1 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 1 failed test

@@ -1,0 +1,630 @@
+{
+ "opus_judge": {
+  "lending-pool-cap-and-reserve": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "glm": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   }
+  },
+  "vaults-harvest-redeem-units": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "lending-guard-refund-cap": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   }
+  },
+  "vaults-fee-claim-and-mark": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "glm": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   }
+  },
+  "fees-keys-subject-and-protocol": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 1,
+    "high": 0,
+    "false": 2
+   }
+  },
+  "lending-sanctions-escrow": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "staking-withdraw-queue": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "governance-council": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 2,
+    "high": 0,
+    "false": 2
+   }
+  },
+  "auctions-gallery-bids": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 0
+   }
+  },
+  "accounts-relayed-wallet": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 3,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 0,
+    "false": 2
+   }
+  },
+  "bridges-message-inbox": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 2,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 2
+   }
+  },
+  "vesting-sponsored-grants": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 1,
+    "high": 1,
+    "false": 1
+   }
+  }
+ },
+ "gpt_judge": {
+  "lending-pool-cap-and-reserve": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "glm": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   }
+  },
+  "vaults-fee-claim-and-mark": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 1,
+    "high": 1,
+    "false": 1
+   },
+   "glm": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   }
+  },
+  "vaults-harvest-redeem-units": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "lending-guard-refund-cap": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   }
+  },
+  "fees-keys-subject-and-protocol": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "glm": {
+    "n": 3,
+    "miss": 1,
+    "high": 0,
+    "false": 3
+   }
+  },
+  "lending-sanctions-escrow": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 1
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "staking-withdraw-queue": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 3
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "governance-council": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "glm": {
+    "n": 3,
+    "miss": 2,
+    "high": 0,
+    "false": 2
+   }
+  },
+  "auctions-gallery-bids": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 1
+   }
+  },
+  "accounts-relayed-wallet": {
+   "opus": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 1
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 3,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 0,
+    "false": 3
+   }
+  },
+  "bridges-message-inbox": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 2,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 3,
+    "high": 3,
+    "false": 3
+   }
+  },
+  "vesting-sponsored-grants": {
+   "opus": {
+    "n": 2,
+    "miss": 0,
+    "high": 0,
+    "false": 2
+   },
+   "gpt": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "kimi": {
+    "n": 3,
+    "miss": 0,
+    "high": 0,
+    "false": 0
+   },
+   "glm": {
+    "n": 3,
+    "miss": 1,
+    "high": 1,
+    "false": 1
+   }
+  }
+ }
+}

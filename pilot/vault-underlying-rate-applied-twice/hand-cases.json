@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "want": "right",
+      "reply": "assets converts an LP-to-underlying quote through receiptToAsset a second time, inflating the price used to mint shares."
+    },
+    {
+      "want": "right",
+      "reply": "The LP rate already returns assets, so multiplying by the receipt exchange rate again doubles reported value and halves the new shares."
+    },
+    {
+      "want": "right",
+      "reply": "The valuation confuses an underlying-denominated amount with receipt units and applies the same unit conversion twice."
+    },
+    {
+      "want": "wrong",
+      "reply": "Either ignoring the low-level success flag or applying the receipt rate twice explains the loss."
+    },
+    {
+      "want": "wrong",
+      "reply": "The share calculation includes the incoming deposit in its denominator before minting."
+    },
+    {
+      "want": "wrong",
+      "reply": "The low-level call discards its success flag, so failed deposits consume ETH without creating receipt balances and cause the missing shares."
+    }
+  ]
+}

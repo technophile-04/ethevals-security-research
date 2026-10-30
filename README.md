@@ -1,13 +1,59 @@
 # ETH Evals security research
 
-This repo holds the raw research behind the security domain of [ETH Evals](https://github.com/BuidlGuidl/ethevals): every candidate question and audit task we tried, the model replies, the grading scripts and the tallies. We're not security experts. We kept the work as it was so that anyone can check our claims.
+This repo holds the raw research behind the security domain of [ETH Evals](https://github.com/BuidlGuidl/ethevals): every candidate question and audit task we tried, the model replies, the grading scripts and the tallies. We're not security experts, so we kept the work as it was for anyone to check.
 
-What came out of it:
+## What we read
+
+Every candidate rests on a real source: a spec, an audit finding, an incident or the compiler's own bug list. The repo cites 90 different sites. These are the main ones:
+
+| Kind | Sources |
+| --- | --- |
+| Standards and docs | [EIPs](https://eips.ethereum.org), [Solidity docs and bug list](https://docs.soliditylang.org), [OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts), [Safe](https://github.com/safe-global/safe-smart-account), [Permit2](https://github.com/Uniswap/permit2), [ERC-4337 EntryPoint](https://github.com/eth-infinitism/account-abstraction) |
+| Audit contests | [Code4rena](https://code4rena.com/reports), [Sherlock](https://audits.sherlock.xyz), [CodeHawks](https://codehawks.cyfrin.io), [Immunefi](https://reports.immunefi.com) |
+| Audit firms | ChainSecurity, Trail of Bits, OtterSec, Halborn, Dedaub, SlowMist, BlockSec |
+| Incidents | [Rekt](https://rekt.news) and the teams' own post-mortems |
+| How auditors work | [Pashov Audit Group skills](https://github.com/pashov/skills), [Trail of Bits skills](https://github.com/trailofbits/skills) |
+| Other benchmarks | [EVMbench](https://github.com/openai/frontier-evals) by OpenAI and Paradigm, [weird-erc20](https://github.com/d-xo/weird-erc20) |
+
+## How our thinking moved
+
+Each round changed the question based on what the last one showed.
+
+```mermaid
+flowchart TB
+  subgraph Q["Questions to bare models, rounds 1 to 5"]
+    direction LR
+    A["<b>1. Facts</b><br/>84 spec questions"] -->|knew them all| B["<b>2. Look-alike code</b><br/>proved with Foundry"]
+    B -->|read like puzzles| C["<b>3. Real findings</b><br/>as short excerpts"]
+    C -->|all found| D["<b>4 and 5. Smells,</b><br/><b>several bugs per contract</b>"]
+  end
+  subgraph T["Audit tasks for agents, round 6"]
+    direction LR
+    E["<b>Our protocols</b><br/>with real 2025 bugs"] -->|all found| F["<b>Bigger code</b><br/>690 to 1,225 lines"]
+    F -->|slower, not harder| G["<b>Mismatched assumptions</b><br/>1 miss in 25 runs"]
+  end
+  Q -->|frontier found everything| T
+```
+
+What we take from it: frontier models find these bugs, and so do the latest open models. Bugs we could write and prove in a day seem to sit inside what the models have already seen.
+
+## How much we tried
+
+| | |
+| --- | --- |
+| Candidate questions | **132**, across 5 rounds |
+| Bare-model replies | **1,583**, from Opus 5.5, GPT-6.1-sol, Kimi K3.1 and GLM 5.3 |
+| Graded verdicts | **843** by a judge model and **298** by rule |
+| Foundry proofs | **75** projects, each proving a candidate's answer |
+| Audit tasks | **4** protocols in 7 versions, with 12 planted bugs |
+| Agent runs on the audit tasks | **26**, with Claude Code, Codex, Kimi and DeepSeek V4.1 Flash |
+
+Where it landed:
 
 - **13 Concepts questions**, merged in [ethevals#81](https://github.com/BuidlGuidl/ethevals/pull/81). Kimi or GLM missed each one in at least one of three cold tries.
 - **4 audit tasks**, in draft [ethevals#83](https://github.com/BuidlGuidl/ethevals/pull/83). No model failed them reliably.
 
-## What we tried
+## Round by round
 
 Rounds 1 to 5 asked bare models, with one API call per question. Round 6 ran agents in the ETH Evals runner.
 
@@ -20,9 +66,7 @@ Rounds 1 to 5 asked bare models, with one API call per question. Round 6 ran age
 | 5. Several bugs in one contract | 12 contracts with 34 issues: "list every issue you would report" | Opus and GPT named every issue. GLM missed whole Highs on 5 contracts. |
 | 6. Audit tasks | An agent audits a protocol of ours (540 to 1,350 lines) that carries real 2025 contest bugs, then writes `findings.md` | 25 scored runs across Claude Code, Codex, Kimi and DeepSeek V4.1 Flash. One Kimi run missed one bug. |
 
-The 13 kept questions came from rounds 1 and 2, then three more cold tries per model (`quizzes/*rescreen*`).
-
-The lesson: frontier models find these bugs, and so do the latest open models. Bugs we could write and prove in a day seem to sit inside what the models have already seen. Making the code nearly twice as large only doubled the time they took.
+The 13 kept questions came from rounds 1 and 2, then three more cold tries per model (`quizzes/*rescreen*`). Every audit-task run is in [audit-tasks/results.md](audit-tasks/results.md).
 
 ## Layout
 
